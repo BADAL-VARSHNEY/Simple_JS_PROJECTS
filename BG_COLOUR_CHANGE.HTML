@@ -1,0 +1,83 @@
+<!-- 
+    ,==|~|||//==:,        ====                ====
+       |~|        `,       \\                  ||
+       |~|         \\       \\                ||
+       |~|         ||        \\              ||
+       |~|        //          \\            ||
+       |~|||;;==""             \\          ||
+       |~|      ``:,            \\        ||
+       |~|          `,           \\      ||
+       |~|           \\           \\    ||
+       |~|           ||            \\  ||
+       |~|          //    [][]      \\||
+    '==|~|||\\::==""     [][]        ||
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>BG_COLOUR_CHANGE</title>
+     <style type="text/css">
+          /* css code start */
+          *{
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+          }
+          /* root colour set a var */
+          :root{
+               --bg_color: #000;
+               --text_color: #fff;
+               --shadow_color: rgba(90, 81, 81, 0.58);
+          }
+                 /* 1st Heading start */
+          h1{
+               background-color: var(--bg_color);
+               color: var(--text_color);
+               width: 800px;
+               font-size: 50px;
+               padding: 5px;
+               margin:250px auto 0px;
+               border-radius: 10px;
+               text-align: center;
+               box-shadow: 8px 15px 6px -3px var(--shadow_color);
+          }
+          /* Button set a code */
+          button{
+               margin: 30px 0px 0px 44%;
+               padding: 20px 65px;
+               border-radius: 10px;
+               font-size: 25px;
+               font-weight: bold;
+               background-color: var(--bg_color);
+               color: var(--text_color);
+               box-shadow: 8px 15px 6px -3px var(--shadow_color);
+          }
+     </style>
+</head>
+<body>
+     <!-- background div start -->
+     <div class="BG">
+          <!-- 1st Heading start -->
+          <h1>Background-Color : <span id="color"> White.! </span></h1>
+          <br>
+          <!-- Button a onclick function start in js code  -->
+          <button onclick="clickBtn()">Click</button>
+     </div>
+     <!-- javascript code start -->
+     <script type="text/javascript">
+          // get id for a Html documnet by function-
+          let color = document.getElementById("color");
+          // create a Array in colours-
+          let colours = ['Red','Orange','Pink','Green','Yellowgreen','LightPink','LightBlue','Blue']
+          // color click btn function start-
+         function clickBtn() {
+               let ramdom_color = Math.floor(Math.random() * colours.length);
+               color.innerHTML = colours[ramdom_color] + '.!';
+               document.body.style.background = colours[ramdom_color];
+          }
+     </script>
+</body>
+</html>
